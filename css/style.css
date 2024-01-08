@@ -28,9 +28,11 @@
 }   
 
 :root {
-    --color-brand-light: #819B57;
+    --color-brand-normal: #819B57;
     --color-brand-dark: #465929;
+    --color-brand-light: #CFCFBC;
     --color-primary-dark: #31261A;
+    --color-secondary-dark: #A18268;
     --color-primary-light: #FAF4EA;
 }
 
@@ -45,6 +47,7 @@ body{
     line-height: 1.5;
     font-weight: 400;
     margin: 0;
+    background-color: var(--color-primary-light);
 }
 h1, h2, h3, h4, h5, h6, p{
     margin-top: 0;
@@ -76,9 +79,9 @@ ul {
 /* Button */
 .button {
     color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
     border-radius: 8px;
-    border: 2px solid var(--color-brand-light);
+    border: 2px solid var(--color-brand-normal);
     cursor: pointer;
     font-weight: 600;
     padding: 16px 32px;
@@ -93,7 +96,7 @@ ul {
     text-decoration: none;
 }
 .link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 /* Header */
@@ -124,6 +127,12 @@ ul {
 /* Hero section */
 .hero-section {
     padding: 272px 0;
+    background-image: url('../img/hero-section_background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* background: url('../img/couple-in-bakery.jpg') no-repeat center top cover; */
 }
 .hero-title {
     color: var(--color-primary-light);
@@ -133,11 +142,11 @@ ul {
     margin-bottom: 0;
 }
 .hero-title .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 /* Advanteges section */
 .advantages-section {
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
     padding: 16px 0;
 }
 .advantages-list {
@@ -155,6 +164,9 @@ ul {
     font-weight: 900;
     line-height: 1.3;
 }
+.section-title.centered {
+    text-align: center;
+}
 .section-title .accent {
     color: var(--color-brand-dark);
 }
@@ -166,7 +178,7 @@ ul {
     margin-bottom: 42px;
 }
 .traditions-text .brand {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 .traditions-text .uppercase {
@@ -190,7 +202,19 @@ ul {
     font-weight: 600;
 }
 .chefs-title {
-    margin-bottom: 80px;
+    margin: 0 auto 80px;
+    max-width: 520px;
+}
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
+}
+.chefs-title::after,
+.chefs-title::before {
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
 }
 /* Formats section */
 .formats-list {
@@ -205,6 +229,10 @@ ul {
     border: 1px solid lightgray; 
     border-radius: 16px;
     padding: 24px;
+    background-image: linear-gradient(180deg, rgba(49, 38, 26, 0.00) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%); 
+    /* remove */
+    height: 444px;
+    box-shadow: 2px 2px 4px 4px pink;
 }
 .format-title {
     font-size: 24px;
@@ -229,8 +257,15 @@ ul {
     text-decoration: none;
 }
 .address-link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 .address-copyright {
     font-size: 14px;
+}
+.footer {
+    background-color: var(--color-primary-dark);
+    background-image: url('../img/image\ 1564.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
